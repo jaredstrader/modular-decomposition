@@ -1,0 +1,30 @@
+[workspace]
+
+[package]
+name = "rust_mod_decomp"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rust_mod_decomp"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["extension-module"] }
+petgraph = "0.6"
+itertools = "0.10"
+
+[dependencies.fracture]
+path = "../crates/fracture"
+
+[dependencies.skeleton]
+path = "../crates/skeleton"
+
+[dependencies.common]
+path = "../crates/common"
+
+[dependencies.modular-decomposition]
+path = "../crates/modular-decomposition"
+
+[dependencies.linear]
+path = "../crates/linear" 
