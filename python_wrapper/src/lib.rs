@@ -130,6 +130,7 @@ fn modular_decompose(
 //python module to expose rust interface
 #[pymodule]
 fn rust_mod_decomp(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add("__doc__", "Python bindings for modular decomposition using Rust backend.")?;
     m.add_function(wrap_pyfunction!(modular_decompose, m)?)?;
     m.add_function(wrap_pyfunction!(module_neighbors, m)?)?;
     Ok(())
